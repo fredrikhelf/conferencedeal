@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MeetingDeal samlar aktuella konferens- och mötesdeals i Skandinavien." />
+  <title>MeetingDeal – Rätt möte. Rätt plats. Rätt pris.</title>
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MeetingDeal startsida"><span>MEETING</span><b>DEAL</b></a>
+    <nav aria-label="Huvudmeny">
+      <a href="#deals">Deals</a><a href="#how">Så fungerar det</a><a href="#guide">Guide</a><a href="#partners">För partners</a>
+    </nav>
+    <div class="header-actions"><button class="text-btn" id="openRequestTop">Få personlig hjälp</button><button class="basket-btn" id="openBasket" aria-label="Öppna offertkorg">Offertkorg <span id="basketCount">0</span></button></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Konferensdeals i Skandinavien</div>
+        <h1>Hitta er nästa<br><em>MeetingDeal.</em></h1>
+        <p>Rätt möte. Rätt plats. Rätt pris. Sök själv – eller låt oss jämföra alternativen åt er.</p>
+        <form class="search-panel" id="searchForm">
+          <label><span>Vart vill ni åka?</span><input id="destination" type="search" placeholder="Stad, region eller anläggning" /></label>
+          <label><span>När?</span><input id="date" type="date" /></label>
+          <label><span>Antal personer</span><input id="participants" type="number" min="8" max="500" value="40" /></label>
+          <label><span>Typ av möte</span><select id="meetingType"><option>Alla mötestyper</option><option>Dagkonferens</option><option>Helpension</option><option>Ledningsmöte</option><option>Kickoff</option><option>Företagsevent</option></select></label>
+          <label class="flex-check"><input id="flexible" type="checkbox" /><span>Vi kan vara flexibla med datum</span></label>
+          <button class="primary" type="submit">Visa MeetingDeals <span>→</span></button>
+        </form>
+      </div>
+      <div class="hero-card">
+        <div class="hero-photo"><span class="deal-pill">Veckans deal</span><div class="photo-caption"><small>Ystad, Skåne</small><strong>Havsnära helpension</strong></div></div>
+        <div class="hero-price"><div><small>Från</small><b>1 895 kr</b><small>/ person</small></div><div class="saving">Spara 24 000 kr<br><small>vid 40 personer</small></div></div>
+      </div>
+    </section>
+
+    <section class="trust-strip" id="how"><div><b>01</b><span><strong>En förfrågan</strong>Slipp kontakta flera anläggningar.</span></div><div><b>02</b><span><strong>Noga utvalda alternativ</strong>Vi väger pris, kvalitet och villkor.</span></div><div><b>03</b><span><strong>Hela prisbilden</strong>Se totalpris och faktisk besparing.</span></div></section>
+
+    <section class="deals-section" id="deals">
+      <div class="section-heading"><div><span class="eyebrow dark">Utvalda just nu</span><h2>Deals värda att samlas kring.</h2></div><p>Priser och paket som är unika för MeetingDeal – utvalda för sitt totala värde, inte bara sin rabatt.</p></div>
+      <div class="filter-row" role="group" aria-label="Filtrera deals">
+        <button class="filter active" data-filter="all">Alla deals</button><button class="filter" data-filter="hot">Hot Deals</button><button class="filter" data-filter="last">Last Minute</button><button class="filter" data-filter="select">MeetingDeal Select</button><button class="filter" data-filter="secret">Secret Deals</button>
+      </div>
+      <div class="deal-grid" id="dealGrid"></div>
+      <div class="empty-state" id="emptyState" hidden><h3>Vi hittar ingen exakt träff ännu.</h3><p>Skicka en förfrågan så letar vi bredare åt er.</p><button class="primary open-request">Hjälp mig hitta rätt</button></div>
+    </section>
+
+    <section class="concierge">
+      <div><span class="eyebrow">Vi gör jobbet åt er</span><h2>En förfrågan.<br>Flera relevanta alternativ.</h2></div>
+      <div><p>Berätta vad ni behöver. Vi jämför anläggningar, innehåll, tillgänglighet och pris – och återkommer med ett genomarbetat urval.</p><button class="light-btn open-request">Låt oss hitta rätt åt er <span>→</span></button><small>Kostnadsfritt och utan bokningstvång.</small></div>
+    </section>
+
+    <section class="destinations"><div class="section-heading"><div><span class="eyebrow dark">Hitta rätt miljö</span><h2>Vad behöver mötet?</h2></div></div><div class="destination-grid"><button data-destination="Stockholm"><b>Citypuls</b><span>Stockholm · Göteborg · Köpenhamn</span></button><button data-destination="Skåne"><b>Hav & kust</b><span>Skåne · Bohuslän · Jylland</span></button><button data-destination="Dalarna"><b>Natur & fokus</b><span>Dalarna · Småland · Telemark</span></button><button data-destination="Spa"><b>Spa & energi</b><span>Utvalda spahotell i Skandinavien</span></button></div></section>
+
+    <section class="guide" id="guide"><div><span class="eyebrow">MeetingDeal Guide</span><h2>Allt för dig som bokar möten.</h2><p>Praktiska guider, kalkyler och checklistor som gör nästa konferens lättare att planera.</p><a href="#guide">Utforska guiden →</a></div><div class="guide-list"><article><span>01</span><div><small>Budget</small><h3>Vad kostar en konferens?</h3></div><b>↗</b></article><article><span>02</span><div><small>Planera</small><h3>Checklistan inför bokningen</h3></div><b>↗</b></article><article><span>03</span><div><small>Verktyg</small><h3>Räkna på hela mötesbudgeten</h3></div><b>↗</b></article></div></section>
+
+    <section class="partner" id="partners"><div><span class="eyebrow">För hotell & mötesanläggningar</span><h2>Fyll lediga datum.<br>Inte prislistan.</h2></div><div><p>Nå rätt företagskunder, styr era egna deals och sälj kapacitet på de dagar ni vill fylla.</p><button class="outline-light">Bli MeetingDeal-partner →</button></div></section>
+  </main>
+
+  <footer><div class="brand"><span>MEETING</span><b>DEAL</b></div><p>Rätt möte. Rätt plats. Rätt pris.</p><div><a href="#deals">Deals</a><a href="#guide">Guide</a><a href="#partners">För partners</a></div><small>© 2026 MeetingDeal</small></footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="basketDrawer" aria-hidden="true"><button class="close" data-close aria-label="Stäng">×</button><span class="eyebrow dark">Offertkorg</span><h2>Jämför era favoriter</h2><div id="basketItems"></div><div class="basket-total"><span>Preliminärt totalpris</span><b id="basketTotal">0 kr</b></div><button class="primary full open-request">Begär offert på alla</button></aside>
+
+  <dialog id="dealDialog"><button class="close" data-dialog-close aria-label="Stäng">×</button><div id="dealDetails"></div></dialog>
+  <dialog id="requestDialog"><button class="close" data-request-close aria-label="Stäng">×</button><div class="request-head"><span class="eyebrow dark">Personlig mötesmatchning</span><h2>Vi hittar er MeetingDeal.</h2><p>Berätta det viktigaste. Vi återkommer med flera relevanta alternativ.</p></div><form id="requestForm" class="request-form"><label>Var vill ni mötas?<input required name="place" placeholder="Stad, region eller max restid" /></label><label>Önskat datum<input required name="when" type="date" /></label><label>Antal personer<input required name="people" type="number" min="8" value="40" /></label><label>Budget per person<input name="budget" type="number" placeholder="Exempel: 2 500 kr" /></label><fieldset><legend>Vad är viktigast?</legend><label><input type="checkbox" name="priority" value="pris"> Pris</label><label><input type="checkbox" name="priority" value="mat"> Gastronomi</label><label><input type="checkbox" name="priority" value="spa"> Spa</label><label><input type="checkbox" name="priority" value="natur"> Natur</label><label><input type="checkbox" name="priority" value="city"> City</label><label><input type="checkbox" name="priority" value="aktiviteter"> Aktiviteter</label></fieldset><label>Företag<input required name="company" /></label><label>E-post<input required name="email" type="email" /></label><button class="primary full" type="submit">Hitta min MeetingDeal →</button></form><div class="success" id="requestSuccess" hidden><span>✓</span><h2>Tack!</h2><p>Nu jämför vi anläggningar, innehåll, tillgänglighet och pris och tar fram de bästa alternativen för er.</p></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
