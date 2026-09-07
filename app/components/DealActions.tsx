@@ -1,0 +1,5 @@
+"use client";
+import Link from "next/link";
+import {useRouter} from "next/navigation";
+import {useState} from "react";
+export function DealActions({dealId,status}:{dealId:string,status:"draft"|"active"|"paused"}){const router=useRouter(),[busy,setBusy]=useState(false),[error,setError]=useState("");async function change(next:"active"|"paused"){setBusy(true);setError("");try{const r=await fetch(`/api/deals/${dealId}`,{method:"PATCH",headers:{"content-type":"application/json"},body:JSON.stringify({status:next})}),d=await r.json();if(!r.ok)throw new Error(d.error||"Status kunde inte ändras.");router.refresh()}catch(e){setError(e instanceof Error?e.message:"Något gick fel.")}finally{setBusy(false)}}return <div className="deal-actions"><Link href={`/partner/deals/${dealId}/edit`}>Redigera</Link><button type="button" disabled={busy} onClick={()=>change(status==="active"?"paused":"active")}>{busy?"Sparar…":status==="active"?"Pausa":"Publicera"}</button>{error&&<small className="action-error">{error}</small>}</div>}
