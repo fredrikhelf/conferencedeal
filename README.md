@@ -1,22 +1,22 @@
 # MeetingDeal
 
-Klickbar MVP för en skandinavisk B2B-marknadsplats för konferens- och mötesdeals.
+En skandinavisk B2B-plattform för konferens- och mötesdeals.
 
-## Nuvarande prototyp
+## Etapp 2
 
-- Responsiv startsida med sök
-- Filterbara MeetingDeals
-- Dealvy och dynamisk totalpriskalkylator
-- Offertkorg för upp till fem anläggningar
-- Förfrågningsflöde
-- Partner- och guidesektioner
+- Offentlig MeetingDeal-startsida och förfrågningsflöde
+- D1-databas för partners, deals och leads
+- Unika lead-ID och 6/12 månaders lead protection
+- Inloggad partnerportal
+- Dealbuilder med Hot, Last Minute, Select och Flex Deal
+- Public, Member och Secret Deal
+- Skyddad adminvy för leads och partnerdeals
 
-Öppna `dist/index.html` för att köra prototypen lokalt.
+## Utveckling
 
-## Nästa produktsteg
+```bash
+npm ci
+npm run dev
+```
 
-1. Databas och administrationsgränssnitt
-2. Partnerinloggning, profil och dealbyggare
-3. Leadregistrering och lead protection
-4. Offertflöde, e-post och dokument
-5. Kundkonto och produktionsdrift
+Databasmigrationer genereras med `npm run db:generate`.
