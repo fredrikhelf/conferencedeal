@@ -1,0 +1,2 @@
+import Link from "next/link";import {Building2,LogOut,Tag} from "lucide-react";import {chatGPTSignOutPath} from "../chatgpt-auth";
+export function MemberHeader({email,company}:{email:string,company?:string}){return <header className="member-header"><Link className="brand" href="/"><span>MEETING</span><b>DEAL</b></Link><nav><Link href="/member"><Tag/>Deals</Link><Link href="/member/profile"><Building2/>Företagsprofil</Link></nav><div><small>{company||email}</small><a href={chatGPTSignOutPath("/")}><LogOut/>Logga ut</a></div></header>}
